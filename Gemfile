@@ -31,7 +31,7 @@ gem "activejob", ">= 4.2"
 gem "activesupport", ">= 4.2"
 gem "activemodel", ">= 4.2"
 gem "actionview", ">= 4.2"
-gem "activerecord", ">= 4.2"
+gem "activerecord", ">= 4.2" 
 
 
 
