@@ -1,12 +1,36 @@
+<script type="text/javascript">
+  window.onload = function() {
+    let modal = document.getElementById('myModal');
+    let butt = document.getElementById('myButt');
+    let span = document.getElementsByClassName("close")[0];
+
+    butt.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+  }
+
+</script>
+
 <h1>Listing articles</h1>
 
-<%= link_to 'New Article', new_article_path %>
+
  
 <table>
   <tr>
     <th>Title</th>
     <th>Text</th>
-    <th colspan="2"></th>
+    <th colspan="3">Editing</th>
   </tr>
  
   <% @articles.each do |article| %>
@@ -22,4 +46,22 @@
     </tr>
   <% end %>
 </table>
+
+<button id="myButt" style="margin: 10px;">New Article</button>
+
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>New Article</h2>
+    </div>
+    <div class="modal-body">
+      <%= render 'form' %>
+    </div>
+    <!-- <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div> -->
+  </div>
+</div>
 

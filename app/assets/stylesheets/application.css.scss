@@ -34,3 +34,22 @@ ul.nav-bar-list {
 a.homepage_link {
     color: white;
 }
+
+.navbar-brand {
+  height: 50px;
+  padding: 15px 15px;
+}
+
+div#logo-container { 
+  position: relative;
+  height: 0px;
+}
+
+div.vertcal-center{  
+  margin: 0;
+  /*height: 0px;*/
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
