@@ -1,6 +1,6 @@
 <% @page_title = "UserAuth | Signup" %>
 
-<div class="sign_form">
+<div class="sign_form" style='margin: auto; padding-left: 40px;'>
 	<h1>Sign Up</h1>
 
 	<%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
@@ -21,6 +21,6 @@
 
 	<% end %>
 
-  <%= link_to 'Users', users_path %>
+  <%= link_to 'Back to Users', users_path %>
 	
 </div>
