@@ -21,6 +21,8 @@ class ArticlesController < ApplicationController
       @article = Article.new(article_params)
      
       if @article.save
+        puts 'ARTICLE ARTICLE ARTICLE ARTICLE ARTICLE ARTICLE ARTICLE ARTICLE ARTICLE'
+        puts @article
         redirect_to @article
       else
         render 'new'
